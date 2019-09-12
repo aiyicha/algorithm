@@ -1,0 +1,19 @@
+spring:
+  session:
+    store-type: none
+    timeoutSeconds: 1500
+
+  datasource:
+    driverClassName: com.sybase.jdbc4.jdbc.SybDriver
+    url: jdbc:sybase:Tds:147.91.1.131:4333/wxpt?charset=cp936
+    username: wxuser
+    password: userwxp
+    tomcat:
+      max-active: 1
+      max-wait: 500
+
+  redis:
+    sentinel:
+      nodes: 10.39.12.56:9379,10.39.12.56:9378,10.39.12.56:9376
+      master: mymaster
+    database: 8
